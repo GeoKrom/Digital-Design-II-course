@@ -1,0 +1,206 @@
+Simulator report for MUX_4_1
+Sat May 05 13:13:29 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 34 nodes     ;
+; Simulation Coverage         ;      64.71 % ;
+; Total Number of Transitions ; 962          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Timing       ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; MUX_16_1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.71 % ;
+; Total nodes checked                                 ; 34           ;
+; Total output ports checked                          ; 34           ;
+; Total output ports with complete 1/0-value coverage ; 22           ;
+; Total output ports with no 1/0-value coverage       ; 10           ;
+; Total output ports with no 1-value coverage         ; 10           ;
+; Total output ports with no 0-value coverage         ; 12           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                              ;
++-------------------------------------------+-------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                          ; Output Port Type ;
++-------------------------------------------+-------------------------------------------+------------------+
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u1|Y~0      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u1|Y~0      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u1|Y~1      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u1|Y~1      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~0      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~0      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~1      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~1      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~2      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~2      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u2|Y~1      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u2|Y~1      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Equal2~0 ; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Equal2~0 ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~3      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~3      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Y~0      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Y~0      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Y~1      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u3|Y~1      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~4      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~4      ; combout          ;
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~5      ; |MUX_16_1|MUX16_1:inst|MUX4_1:u4|Y~5      ; combout          ;
+; |MUX_16_1|F                               ; |MUX_16_1|F                               ; padio            ;
+; |MUX_16_1|SEL[0]                          ; |MUX_16_1|SEL[0]~corein                   ; combout          ;
+; |MUX_16_1|SEL[1]                          ; |MUX_16_1|SEL[1]~corein                   ; combout          ;
+; |MUX_16_1|SEL[2]                          ; |MUX_16_1|SEL[2]~corein                   ; combout          ;
+; |MUX_16_1|SEL[3]                          ; |MUX_16_1|SEL[3]~corein                   ; combout          ;
+; |MUX_16_1|D[11]                           ; |MUX_16_1|D[11]~corein                    ; combout          ;
+; |MUX_16_1|D[12]                           ; |MUX_16_1|D[12]~corein                    ; combout          ;
+; |MUX_16_1|D[13]                           ; |MUX_16_1|D[13]~corein                    ; combout          ;
+; |MUX_16_1|D[14]                           ; |MUX_16_1|D[14]~corein                    ; combout          ;
+; |MUX_16_1|D[15]                           ; |MUX_16_1|D[15]~corein                    ; combout          ;
++-------------------------------------------+-------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------+
+; Missing 1-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |MUX_16_1|D[5] ; |MUX_16_1|D[5]~corein ; combout          ;
+; |MUX_16_1|D[6] ; |MUX_16_1|D[6]~corein ; combout          ;
+; |MUX_16_1|D[4] ; |MUX_16_1|D[4]~corein ; combout          ;
+; |MUX_16_1|D[7] ; |MUX_16_1|D[7]~corein ; combout          ;
+; |MUX_16_1|D[2] ; |MUX_16_1|D[2]~corein ; combout          ;
+; |MUX_16_1|D[1] ; |MUX_16_1|D[1]~corein ; combout          ;
+; |MUX_16_1|D[0] ; |MUX_16_1|D[0]~corein ; combout          ;
+; |MUX_16_1|D[3] ; |MUX_16_1|D[3]~corein ; combout          ;
+; |MUX_16_1|D[9] ; |MUX_16_1|D[9]~corein ; combout          ;
+; |MUX_16_1|D[8] ; |MUX_16_1|D[8]~corein ; combout          ;
++----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                       ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |MUX_16_1|MUX16_1:inst|MUX4_1:u2|Y~0 ; |MUX_16_1|MUX16_1:inst|MUX4_1:u2|Y~0 ; combout          ;
+; |MUX_16_1|D[5]                       ; |MUX_16_1|D[5]~corein                ; combout          ;
+; |MUX_16_1|D[6]                       ; |MUX_16_1|D[6]~corein                ; combout          ;
+; |MUX_16_1|D[4]                       ; |MUX_16_1|D[4]~corein                ; combout          ;
+; |MUX_16_1|D[7]                       ; |MUX_16_1|D[7]~corein                ; combout          ;
+; |MUX_16_1|D[2]                       ; |MUX_16_1|D[2]~corein                ; combout          ;
+; |MUX_16_1|D[1]                       ; |MUX_16_1|D[1]~corein                ; combout          ;
+; |MUX_16_1|D[0]                       ; |MUX_16_1|D[0]~corein                ; combout          ;
+; |MUX_16_1|D[3]                       ; |MUX_16_1|D[3]~corein                ; combout          ;
+; |MUX_16_1|D[9]                       ; |MUX_16_1|D[9]~corein                ; combout          ;
+; |MUX_16_1|D[10]                      ; |MUX_16_1|D[10]~corein               ; combout          ;
+; |MUX_16_1|D[8]                       ; |MUX_16_1|D[8]~corein                ; combout          ;
++--------------------------------------+--------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat May 05 13:13:29 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MUX_4_1 -c MUX_4_1
+Info: Using vector source file "E:/Ηλεκτρονική και Τηλεπικοινωνίες/Digital Design II/Lab4/MUX/MUX_16_1.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      64.71 %
+Info: Number of transitions in simulation is 962
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Sat May 05 13:13:29 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
