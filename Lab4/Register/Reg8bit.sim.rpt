@@ -1,0 +1,648 @@
+Simulator report for Reg8bit
+Sat May 12 20:14:51 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 242 nodes    ;
+; Simulation Coverage         ;      21.59 % ;
+; Total Number of Transitions ; 5635         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Timing       ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; Reg_8bit.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.59 % ;
+; Total nodes checked                                 ; 242          ;
+; Total output ports checked                          ; 264          ;
+; Total output ports with complete 1/0-value coverage ; 57           ;
+; Total output ports with no 1/0-value coverage       ; 206          ;
+; Total output ports with no 1-value coverage         ; 206          ;
+; Total output ports with no 0-value coverage         ; 207          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                        ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]     ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]~20  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]~20  ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]~20  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[0]~21  ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~22  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~22  ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[7]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[6]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[6]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[5]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[5]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[4]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[4]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[3]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[3]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[2]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[2]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[1]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[1]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[0]~head_lut                          ; |Reg_8bit|Reg8:inst|STORE[0]~head_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[7]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~clear_lut                         ; |Reg_8bit|Reg8:inst|STORE[7]~clear_lut                         ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~9                                 ; |Reg_8bit|Reg8:inst|STORE[7]~9                                 ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[6]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[6]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[5]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[5]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[4]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[4]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[3]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[3]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[2]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[2]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[1]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[1]~data_lut                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[0]~data_lut                          ; |Reg_8bit|Reg8:inst|STORE[0]~data_lut                          ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~26 ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~26 ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[2]~0         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[2]~0         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[2]~2         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[2]~2         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[1]~3         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[1]~3         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[1]~4         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[1]~4         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~5         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~5         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~6         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~6         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan1~0            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan1~0            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~2            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~2            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[0]~7         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[0]~7         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[0]~8         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[0]~8         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~3            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~3            ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~latch                             ; |Reg_8bit|Reg8:inst|STORE[7]~latch                             ; combout          ;
+; |Reg_8bit|Q[7]                                                 ; |Reg_8bit|Q[7]                                                 ; padio            ;
+; |Reg_8bit|Q[6]                                                 ; |Reg_8bit|Q[6]                                                 ; padio            ;
+; |Reg_8bit|Q[5]                                                 ; |Reg_8bit|Q[5]                                                 ; padio            ;
+; |Reg_8bit|Q[4]                                                 ; |Reg_8bit|Q[4]                                                 ; padio            ;
+; |Reg_8bit|Q[3]                                                 ; |Reg_8bit|Q[3]                                                 ; padio            ;
+; |Reg_8bit|Q[2]                                                 ; |Reg_8bit|Q[2]                                                 ; padio            ;
+; |Reg_8bit|Q[1]                                                 ; |Reg_8bit|Q[1]                                                 ; padio            ;
+; |Reg_8bit|Q[0]                                                 ; |Reg_8bit|Q[0]                                                 ; padio            ;
+; |Reg_8bit|RESET                                                ; |Reg_8bit|RESET~corein                                         ; combout          ;
+; |Reg_8bit|CLOCK_50Hz                                           ; |Reg_8bit|CLOCK_50Hz~corein                                    ; combout          ;
+; |Reg_8bit|CLK                                                  ; |Reg_8bit|CLK~corein                                           ; combout          ;
+; |Reg_8bit|SET                                                  ; |Reg_8bit|SET~corein                                           ; combout          ;
+; |Reg_8bit|D[5]                                                 ; |Reg_8bit|D[5]~corein                                          ; combout          ;
+; |Reg_8bit|D[4]                                                 ; |Reg_8bit|D[4]~corein                                          ; combout          ;
+; |Reg_8bit|D[3]                                                 ; |Reg_8bit|D[3]~corein                                          ; combout          ;
+; |Reg_8bit|D[2]                                                 ; |Reg_8bit|D[2]~corein                                          ; combout          ;
+; |Reg_8bit|D[1]                                                 ; |Reg_8bit|D[1]~corein                                          ; combout          ;
+; |Reg_8bit|D[0]                                                 ; |Reg_8bit|D[0]~corein                                          ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~clear_lutclkctrl                  ; |Reg_8bit|Reg8:inst|STORE[7]~clear_lutclkctrl                  ; outclk           ;
+; |Reg_8bit|CLOCK_50Hz~clkctrl                                   ; |Reg_8bit|CLOCK_50Hz~clkctrl                                   ; outclk           ;
+; |Reg_8bit|CLK~clkctrl                                          ; |Reg_8bit|CLK~clkctrl                                          ; outclk           ;
+; |Reg_8bit|RESET~clkctrl                                        ; |Reg_8bit|RESET~clkctrl                                        ; outclk           ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                         ; Output Port Name                                                                                            ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ                                                                 ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ                                                           ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[0] ; portadataout0    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[1] ; portadataout1    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[2] ; portadataout2    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[3] ; portadataout3    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[4] ; portadataout4    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[5] ; portadataout5    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[6] ; portadataout6    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[7] ; portadataout7    ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~22                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~23                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~25                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~28                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~30                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~32                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~34                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~36                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~38                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~40                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~42                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~44                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~46                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~48                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~50                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~52                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~54                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~56                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~58                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]~59                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]~59                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~1                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~5                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~7                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~9                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~13                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~13                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS                                                              ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E                                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E                                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT                                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT                                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.Print_String                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.Print_String                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DROP_LCD_E                                                          ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DROP_LCD_E                                                    ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.HOLD                                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.HOLD                                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector1~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector1~0                                                         ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[7]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[6]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[6]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[5]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[5]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[4]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[4]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[3]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[3]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[2]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[2]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[1]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[1]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[0]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[0]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E~0                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E~0                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.Print_String                                                 ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.Print_String                                           ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~28                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~28                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[7]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[7]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[6]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[6]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[5]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[5]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[4]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[4]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[3]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[3]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[2]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[2]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[1]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[1]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[0]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[0]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.MODE_SET                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.MODE_SET                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.LINE2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.LINE2                                                         ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RETURN_HOME                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RETURN_HOME                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[0]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[0]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[3]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[3]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[2]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[2]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[1]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[1]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[4]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[4]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~1                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~1                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~1                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~1                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|process_1~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|process_1~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~2                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~2                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal0~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal0~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~1                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~1                                                      ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_ON                                                          ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_ON                                                    ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_OFF                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_OFF                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_CLEAR                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_CLEAR                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET3                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET3                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.FUNC_SET                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.FUNC_SET                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET2                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET2                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.MODE_SET                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.MODE_SET                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~29                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~29                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.LINE2                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.LINE2                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~30                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~30                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RETURN_HOME                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RETURN_HOME                                            ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~31                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~31                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~3                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~3                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~2                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~2                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~3                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~3                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~10                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~10                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~11                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~11                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~12                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~12                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~15                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~15                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_ON                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_ON                                             ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~32                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~32                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_OFF                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_OFF                                            ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~33                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~33                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_CLEAR                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_CLEAR                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~34                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~34                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET3                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET3                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~35                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~35                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.FUNC_SET                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.FUNC_SET                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~36                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~36                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET2                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET2                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~37                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~37                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector14~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector14~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector16~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector16~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~1                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~1                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector13~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector13~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector20~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector20~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector21~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector21~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector19~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector19~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector12~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector12~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector18~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector18~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~4                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~4                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~3                                                         ; combout          ;
+; |Reg_8bit|DBUS[7]                                                                                                 ; |Reg_8bit|DBUS[7]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[6]                                                                                                 ; |Reg_8bit|DBUS[6]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[5]                                                                                                 ; |Reg_8bit|DBUS[5]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[4]                                                                                                 ; |Reg_8bit|DBUS[4]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[3]                                                                                                 ; |Reg_8bit|DBUS[3]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[2]                                                                                                 ; |Reg_8bit|DBUS[2]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[1]                                                                                                 ; |Reg_8bit|DBUS[1]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[0]                                                                                                 ; |Reg_8bit|DBUS[0]~output                                                                                    ; padio            ;
+; |Reg_8bit|LCD_RS                                                                                                  ; |Reg_8bit|LCD_RS                                                                                            ; padio            ;
+; |Reg_8bit|LCD_E                                                                                                   ; |Reg_8bit|LCD_E                                                                                             ; padio            ;
+; |Reg_8bit|LCD_RW                                                                                                  ; |Reg_8bit|LCD_RW                                                                                            ; padio            ;
+; |Reg_8bit|LCD_STATUS_OUT                                                                                          ; |Reg_8bit|LCD_STATUS_OUT                                                                                    ; padio            ;
+; |Reg_8bit|LCD_BL_STATUS_OUT                                                                                       ; |Reg_8bit|LCD_BL_STATUS_OUT                                                                                 ; padio            ;
+; |Reg_8bit|D[7]                                                                                                    ; |Reg_8bit|D[7]~corein                                                                                       ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~clkctrl                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~clkctrl                                                   ; outclk           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT~feeder                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT~feeder                                                   ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1~feeder                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1~feeder                                                 ; combout          ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                         ; Output Port Name                                                                                            ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ                                                                 ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ                                                           ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[0] ; portadataout0    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[1] ; portadataout1    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[2] ; portadataout2    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[3] ; portadataout3    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[4] ; portadataout4    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[5] ; portadataout5    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[6] ; portadataout6    ;
+; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|ram_block1a0 ; |Reg_8bit|newlcd:inst5|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_7f71:auto_generated|q_a[7] ; portadataout7    ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~22                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[1]~23                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~24                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[2]~25                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~27                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[3]~28                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~29                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[4]~30                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~31                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[5]~32                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~33                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[6]~34                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~35                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[7]~36                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~37                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[8]~38                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                               ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~39                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[9]~40                                               ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~41                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[10]~42                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~43                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[11]~44                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~45                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[12]~46                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~47                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[13]~48                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~49                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[14]~50                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~51                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[15]~52                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~53                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[16]~54                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~55                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[17]~56                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~57                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[18]~58                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]~59                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_COUNT_400HZ[19]~59                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~0                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~1                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~4                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~5                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~6                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~7                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~8                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~9                                                              ; cout             ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~13                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~13                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS                                                              ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E                                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E                                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT                                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT                                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.Print_String                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.Print_String                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DROP_LCD_E                                                          ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DROP_LCD_E                                                    ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.HOLD                                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.HOLD                                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector1~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector1~0                                                         ; combout          ;
+; |Reg_8bit|Reg8:inst|STORE[7]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[7]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[6]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[6]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[5]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[5]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[4]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[4]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[3]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[3]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[2]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[2]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[1]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[1]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|Reg8:inst|STORE[0]~_emulated                                                                            ; |Reg_8bit|Reg8:inst|STORE[0]~_emulated                                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E~0                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E~0                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RS~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.Print_String                                                 ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.Print_String                                           ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~28                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~28                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LessThan0~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[7]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[7]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[6]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[6]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[5]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[5]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[4]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[4]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[3]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[3]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[2]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[2]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[1]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[1]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[0]                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[0]                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.MODE_SET                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.MODE_SET                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.LINE2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.LINE2                                                         ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RETURN_HOME                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RETURN_HOME                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[0]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[0]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[3]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[3]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[2]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[2]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[1]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[1]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[4]                                                             ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CHAR_COUNT[4]                                                       ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~1                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal3~1                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~1                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal2~1                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|process_1~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|process_1~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~2                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~2                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal0~0                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Equal0~0                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~1                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Next_Char[3]~1                                                      ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector3~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_ON                                                          ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_ON                                                    ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_OFF                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_OFF                                                   ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_CLEAR                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.DISPLAY_CLEAR                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~3                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector4~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector5~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET3                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET3                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.FUNC_SET                                                            ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.FUNC_SET                                                      ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET2                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET2                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1                                                        ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~4                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector6~4                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector7~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector8~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~0                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~0                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~1                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~1                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~2                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector9~2                                                         ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.MODE_SET                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.MODE_SET                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~29                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~29                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.LINE2                                                        ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.LINE2                                                  ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~30                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~30                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RETURN_HOME                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RETURN_HOME                                            ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~31                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~31                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~3                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~3                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~2                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~2                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~3                                                                    ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~3                                                              ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~10                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~10                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~11                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~11                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~12                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~12                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~15                                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Add2~15                                                             ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_ON                                                   ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_ON                                             ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~32                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~32                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_OFF                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_OFF                                            ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~33                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~33                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_CLEAR                                                ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DISPLAY_CLEAR                                          ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~34                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~34                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET3                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET3                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~35                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~35                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.FUNC_SET                                                     ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.FUNC_SET                                               ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~36                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~36                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET2                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET2                                                 ; regout           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~37                                                                  ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state~37                                                            ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector14~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector14~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector16~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector16~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~1                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector17~1                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector13~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector13~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector20~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector20~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector21~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector21~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector19~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector19~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector12~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector12~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector18~0                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector18~0                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~4                                                              ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector15~4                                                        ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~3                                                               ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|Selector2~3                                                         ; combout          ;
+; |Reg_8bit|DBUS[7]                                                                                                 ; |Reg_8bit|DBUS[7]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[6]                                                                                                 ; |Reg_8bit|DBUS[6]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[5]                                                                                                 ; |Reg_8bit|DBUS[5]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[4]                                                                                                 ; |Reg_8bit|DBUS[4]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[3]                                                                                                 ; |Reg_8bit|DBUS[3]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[2]                                                                                                 ; |Reg_8bit|DBUS[2]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[1]                                                                                                 ; |Reg_8bit|DBUS[1]~output                                                                                    ; padio            ;
+; |Reg_8bit|DBUS[0]                                                                                                 ; |Reg_8bit|DBUS[0]~output                                                                                    ; padio            ;
+; |Reg_8bit|LCD_RS                                                                                                  ; |Reg_8bit|LCD_RS                                                                                            ; padio            ;
+; |Reg_8bit|LCD_E                                                                                                   ; |Reg_8bit|LCD_E                                                                                             ; padio            ;
+; |Reg_8bit|LCD_RW                                                                                                  ; |Reg_8bit|LCD_RW                                                                                            ; padio            ;
+; |Reg_8bit|LCD_STATUS_OUT                                                                                          ; |Reg_8bit|LCD_STATUS_OUT                                                                                    ; padio            ;
+; |Reg_8bit|LCD_BL_STATUS_OUT                                                                                       ; |Reg_8bit|LCD_BL_STATUS_OUT                                                                                 ; padio            ;
+; |Reg_8bit|D[7]                                                                                                    ; |Reg_8bit|D[7]~corein                                                                                       ; combout          ;
+; |Reg_8bit|D[6]                                                                                                    ; |Reg_8bit|D[6]~corein                                                                                       ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~clkctrl                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|CLK_400HZ~clkctrl                                                   ; outclk           ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT~feeder                                                         ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT~feeder                                                   ; combout          ;
+; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1~feeder                                                       ; |Reg_8bit|newlcd:inst5|LCD_Display:inst|state.RESET1~feeder                                                 ; combout          ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat May 12 20:14:50 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Reg8bit -c Reg8bit
+Info: Using vector source file "E:/Ηλεκτρονική και Τηλεπικοινωνίες/Digital Design II/Lab4/Register/Reg_8bit.vwf"
+Warning: Can't display state machine states -- register holding state machine bit "|Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.HOLD" was synthesized away
+Warning: Can't display state machine states -- register holding state machine bit "|Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.RESET1" was synthesized away
+Warning: Can't display state machine states -- register holding state machine bit "|Reg_8bit|newlcd:inst5|LCD_Display:inst|next_command.DROP_LCD_E" was synthesized away
+Info: Inverted registers were found during simulation
+    Info: Register: |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_E
+    Info: Register: |Reg_8bit|newlcd:inst5|LCD_Display:inst|LCD_RW_INT
+    Info: Register: |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[5]
+    Info: Register: |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[4]
+    Info: Register: |Reg_8bit|newlcd:inst5|LCD_Display:inst|DATA_BUS_VALUE[3]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      21.59 %
+Info: Number of transitions in simulation is 5635
+Info: Quartus II Simulator was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Sat May 12 20:14:51 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
