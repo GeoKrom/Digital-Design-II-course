@@ -1,0 +1,11 @@
+|FA
+F0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+I0 => inst.IN0
+I0 => inst2.IN0
+I1 => inst.IN1
+I1 => inst2.IN1
+I2 => inst1.IN1
+I2 => inst3.IN1
+F1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
