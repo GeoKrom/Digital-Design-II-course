@@ -1,0 +1,65 @@
+|Counter8bit
+CountValue[0] <= Counter_8bit:inst.CountValue[0]
+CountValue[1] <= Counter_8bit:inst.CountValue[1]
+CountValue[2] <= Counter_8bit:inst.CountValue[2]
+CountValue[3] <= Counter_8bit:inst.CountValue[3]
+CountValue[4] <= Counter_8bit:inst.CountValue[4]
+CountValue[5] <= Counter_8bit:inst.CountValue[5]
+CountValue[6] <= Counter_8bit:inst.CountValue[6]
+CountValue[7] <= Counter_8bit:inst.CountValue[7]
+CLK => Counter_8bit:inst.CLK
+RESET => Counter_8bit:inst.RST
+SET => Counter_8bit:inst.SET
+CountIn[0] => Counter_8bit:inst.CountIn[0]
+CountIn[1] => Counter_8bit:inst.CountIn[1]
+CountIn[2] => Counter_8bit:inst.CountIn[2]
+CountIn[3] => Counter_8bit:inst.CountIn[3]
+CountIn[4] => Counter_8bit:inst.CountIn[4]
+CountIn[5] => Counter_8bit:inst.CountIn[5]
+CountIn[6] => Counter_8bit:inst.CountIn[6]
+CountIn[7] => Counter_8bit:inst.CountIn[7]
+
+
+|Counter8bit|Counter_8bit:inst
+CountIn[0] => ~NO_FANOUT~
+CountIn[1] => ~NO_FANOUT~
+CountIn[2] => ~NO_FANOUT~
+CountIn[3] => ~NO_FANOUT~
+CountIn[4] => ~NO_FANOUT~
+CountIn[5] => ~NO_FANOUT~
+CountIn[6] => ~NO_FANOUT~
+CountIn[7] => ~NO_FANOUT~
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => count[3].CLK
+CLK => count[4].CLK
+CLK => count[5].CLK
+CLK => count[6].CLK
+CLK => count[7].CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => count[3].ACLR
+RST => count[4].ACLR
+RST => count[5].ACLR
+RST => count[6].ACLR
+RST => count[7].ACLR
+SET => count[0].ENA
+SET => count[7].ENA
+SET => count[6].ENA
+SET => count[5].ENA
+SET => count[4].ENA
+SET => count[3].ENA
+SET => count[2].ENA
+SET => count[1].ENA
+CountValue[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[4] <= count[4].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[5] <= count[5].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[6] <= count[6].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[7] <= count[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1374 @@
+--lpm_counter CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone II" lpm_direction="UP" lpm_port_updown="PORT_UNUSED" lpm_width=256 aclr aset clock q CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 9.1SP2 cbx_cycloneii 2010:03:24:20:43:43:SJ cbx_lpm_add_sub 2010:03:24:20:43:43:SJ cbx_lpm_compare 2010:03:24:20:43:43:SJ cbx_lpm_counter 2010:03:24:20:43:43:SJ cbx_lpm_decode 2010:03:24:20:43:43:SJ cbx_mgl 2010:03:24:21:01:05:SJ cbx_stratix 2010:03:24:20:43:43:SJ cbx_stratixii 2010:03:24:20:43:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cycloneii_lcell_comb (cin, dataa, datab, datac, datad)
+WITH ( LUT_MASK, SUM_LUTC_INPUT)
+RETURNS ( combout, cout);
+FUNCTION cycloneii_lcell_ff (aclr, clk, datain, ena, sclr, sdata, sload)
+WITH ( x_on_violation)
+RETURNS ( regout);
+
+--synthesis_resources = lut 256 reg 256 
+OPTIONS ALTERA_INTERNAL_OPTION = "suppress_da_rule_internal=a101;suppress_da_rule_internal=s102;suppress_da_rule_internal=s103";
+
+SUBDESIGN cntr_gki
+( 
+	aclr	:	input;
+	aset	:	input;
+	clock	:	input;
+	q[255..0]	:	output;
+) 
+VARIABLE 
+	counter_comb_bita0 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita1 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita2 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita3 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita4 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita5 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita6 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita7 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita8 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita9 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita10 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita11 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita12 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita13 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita14 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita15 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita16 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita17 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita18 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita19 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita20 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita21 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita22 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita23 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita24 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita25 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita26 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita27 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita28 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita29 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita30 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita31 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita32 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita33 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita34 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita35 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita36 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita37 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita38 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita39 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita40 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita41 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita42 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita43 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita44 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita45 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita46 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita47 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita48 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita49 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita50 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita51 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita52 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita53 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita54 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita55 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita56 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita57 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita58 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita59 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita60 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita61 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita62 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita63 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita64 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita65 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita66 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita67 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita68 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita69 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita70 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita71 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita72 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita73 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita74 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita75 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita76 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita77 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita78 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita79 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita80 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita81 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita82 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita83 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita84 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita85 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita86 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita87 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita88 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita89 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita90 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita91 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita92 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita93 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita94 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita95 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita96 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita97 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita98 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita99 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita100 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita101 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita102 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita103 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita104 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita105 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita106 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita107 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita108 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita109 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita110 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita111 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita112 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita113 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita114 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita115 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita116 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita117 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita118 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita119 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita120 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita121 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita122 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita123 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita124 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita125 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita126 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita127 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita128 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita129 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita130 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita131 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita132 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita133 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita134 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita135 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita136 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita137 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita138 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita139 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita140 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita141 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita142 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita143 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita144 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita145 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita146 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita147 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita148 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita149 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita150 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita151 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita152 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita153 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita154 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita155 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita156 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita157 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita158 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita159 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita160 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita161 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita162 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita163 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita164 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita165 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita166 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita167 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita168 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita169 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita170 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita171 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita172 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita173 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita174 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita175 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita176 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita177 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita178 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita179 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita180 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita181 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita182 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita183 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita184 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita185 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita186 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita187 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita188 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita189 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita190 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita191 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita192 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita193 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita194 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita195 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita196 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita197 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita198 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita199 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita200 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita201 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita202 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita203 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita204 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita205 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita206 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita207 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita208 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita209 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita210 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita211 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita212 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita213 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita214 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita215 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita216 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita217 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita218 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita219 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita220 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita221 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita222 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita223 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita224 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita225 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita226 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita227 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita228 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita229 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita230 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita231 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita232 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita233 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita234 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita235 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita236 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita237 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita238 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita239 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita240 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita241 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita242 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita243 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita244 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita245 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita246 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita247 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita248 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita249 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita250 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita251 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita252 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita253 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita254 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita255 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_reg_bit1a[255..0] : cycloneii_lcell_ff;
+	a_data[255..0]	: WIRE;
+	a_val[255..0]	: WIRE;
+	aclr_actual	: WIRE;
+	aload	: NODE;
+	clk_en	: NODE;
+	cnt_en	: NODE;
+	data[255..0]	: NODE;
+	effective_clrn[255..0]	: WIRE;
+	effective_prn[255..0]	: WIRE;
+	external_cin	: WIRE;
+	latch_signal[255..0]	: WIRE;
+	pre_hazard[255..0]	: WIRE;
+	pre_latch_signal[255..0]	: WIRE;
+	s_val[255..0]	: WIRE;
+	safe_q[255..0]	: WIRE;
+	sclr	: NODE;
+	sload	: NODE;
+	sset	: NODE;
+	updown_dir	: WIRE;
+
+BEGIN 
+	counter_comb_bita[255..0].cin = ( counter_comb_bita[254..0].cout, external_cin);
+	counter_comb_bita[255..0].dataa = ( counter_reg_bit1a[255..0].regout);
+	counter_comb_bita[255..0].datab = ( ((! latch_signal[255..255]) $ updown_dir), ((! latch_signal[254..254]) $ updown_dir), ((! latch_signal[253..253]) $ updown_dir), ((! latch_signal[252..252]) $ updown_dir), ((! latch_signal[251..251]) $ updown_dir), ((! latch_signal[250..250]) $ updown_dir), ((! latch_signal[249..249]) $ updown_dir), ((! latch_signal[248..248]) $ updown_dir), ((! latch_signal[247..247]) $ updown_dir), ((! latch_signal[246..246]) $ updown_dir), ((! latch_signal[245..245]) $ updown_dir), ((! latch_signal[244..244]) $ updown_dir), ((! latch_signal[243..243]) $ updown_dir), ((! latch_signal[242..242]) $ updown_dir), ((! latch_signal[241..241]) $ updown_dir), ((! latch_signal[240..240]) $ updown_dir), ((! latch_signal[239..239]) $ updown_dir), ((! latch_signal[238..238]) $ updown_dir), ((! latch_signal[237..237]) $ updown_dir), ((! latch_signal[236..236]) $ updown_dir), ((! latch_signal[235..235]) $ updown_dir), ((! latch_signal[234..234]) $ updown_dir), ((! latch_signal[233..233]) $ updown_dir), ((! latch_signal[232..232]) $ updown_dir), ((! latch_signal[231..231]) $ updown_dir), ((! latch_signal[230..230]) $ updown_dir), ((! latch_signal[229..229]) $ updown_dir), ((! latch_signal[228..228]) $ updown_dir), ((! latch_signal[227..227]) $ updown_dir), ((! latch_signal[226..226]) $ updown_dir), ((! latch_signal[225..225]) $ updown_dir), ((! latch_signal[224..224]) $ updown_dir), ((! latch_signal[223..223]) $ updown_dir), ((! latch_signal[222..222]) $ updown_dir), ((! latch_signal[221..221]) $ updown_dir), ((! latch_signal[220..220]) $ updown_dir), ((! latch_signal[219..219]) $ updown_dir), ((! latch_signal[218..218]) $ updown_dir), ((! latch_signal[217..217]) $ updown_dir), ((! latch_signal[216..216]) $ updown_dir), ((! latch_signal[215..215]) $ updown_dir), ((! latch_signal[214..214]) $ updown_dir), ((! latch_signal[213..213]) $ updown_dir), ((! latch_signal[212..212]) $ updown_dir), ((! latch_signal[211..211]) $ updown_dir), ((! latch_signal[210..210]) $ updown_dir), ((! latch_signal[209..209]) $ updown_dir), ((! latch_signal[208..208]) $ updown_dir), ((! latch_signal[207..207]) $ updown_dir), ((! latch_signal[206..206]) $ updown_dir), ((! latch_signal[205..205]) $ updown_dir), ((! latch_signal[204..204]) $ updown_dir), ((! latch_signal[203..203]) $ updown_dir), ((! latch_signal[202..202]) $ updown_dir), ((! latch_signal[201..201]) $ updown_dir), ((! latch_signal[200..200]) $ updown_dir), ((! latch_signal[199..199]) $ updown_dir), ((! latch_signal[198..198]) $ updown_dir), ((! latch_signal[197..197]) $ updown_dir), ((! latch_signal[196..196]) $ updown_dir), ((! latch_signal[195..195]) $ updown_dir), ((! latch_signal[194..194]) $ updown_dir), ((! latch_signal[193..193]) $ updown_dir), ((! latch_signal[192..192]) $ updown_dir), ((! latch_signal[191..191]) $ updown_dir), ((! latch_signal[190..190]) $ updown_dir), ((! latch_signal[189..189]) $ updown_dir), ((! latch_signal[188..188]) $ updown_dir), ((! latch_signal[187..187]) $ updown_dir), ((! latch_signal[186..186]) $ updown_dir), ((! latch_signal[185..185]) $ updown_dir), ((! latch_signal[184..184]) $ updown_dir), ((! latch_signal[183..183]) $ updown_dir), ((! latch_signal[182..182]) $ updown_dir), ((! latch_signal[181..181]) $ updown_dir), ((! latch_signal[180..180]) $ updown_dir), ((! latch_signal[179..179]) $ updown_dir), ((! latch_signal[178..178]) $ updown_dir), ((! latch_signal[177..177]) $ updown_dir), ((! latch_signal[176..176]) $ updown_dir), ((! latch_signal[175..175]) $ updown_dir), ((! latch_signal[174..174]) $ updown_dir), ((! latch_signal[173..173]) $ updown_dir), ((! latch_signal[172..172]) $ updown_dir), ((! latch_signal[171..171]) $ updown_dir), ((! latch_signal[170..170]) $ updown_dir), ((! latch_signal[169..169]) $ updown_dir), ((! latch_signal[168..168]) $ updown_dir), ((! latch_signal[167..167]) $ updown_dir), ((! latch_signal[166..166]) $ updown_dir), ((! latch_signal[165..165]) $ updown_dir), ((! latch_signal[164..164]) $ updown_dir), ((! latch_signal[163..163]) $ updown_dir), ((! latch_signal[162..162]) $ updown_dir), ((! latch_signal[161..161]) $ updown_dir), ((! latch_signal[160..160]) $ updown_dir), ((! latch_signal[159..159]) $ updown_dir), ((! latch_signal[158..158]) $ updown_dir), ((! latch_signal[157..157]) $ updown_dir), ((! latch_signal[156..156]) $ updown_dir), ((! latch_signal[155..155]) $ updown_dir), ((! latch_signal[154..154]) $ updown_dir), ((! latch_signal[153..153]) $ updown_dir), ((! latch_signal[152..152]) $ updown_dir), ((! latch_signal[151..151]) $ updown_dir), ((! latch_signal[150..150]) $ updown_dir), ((! latch_signal[149..149]) $ updown_dir), ((! latch_signal[148..148]) $ updown_dir), ((! latch_signal[147..147]) $ updown_dir), ((! latch_signal[146..146]) $ updown_dir), ((! latch_signal[145..145]) $ updown_dir), ((! latch_signal[144..144]) $ updown_dir), ((! latch_signal[143..143]) $ updown_dir), ((! latch_signal[142..142]) $ updown_dir), ((! latch_signal[141..141]) $ updown_dir), ((! latch_signal[140..140]) $ updown_dir), ((! latch_signal[139..139]) $ updown_dir), ((! latch_signal[138..138]) $ updown_dir), ((! latch_signal[137..137]) $ updown_dir), ((! latch_signal[136..136]) $ updown_dir), ((! latch_signal[135..135]) $ updown_dir), ((! latch_signal[134..134]) $ updown_dir), ((! latch_signal[133..133]) $ updown_dir), ((! latch_signal[132..132]) $ updown_dir), ((! latch_signal[131..131]) $ updown_dir), ((! latch_signal[130..130]) $ updown_dir), ((! latch_signal[129..129]) $ updown_dir), ((! latch_signal[128..128]) $ updown_dir), ((! latch_signal[127..127]) $ updown_dir), ((! latch_signal[126..126]) $ updown_dir), ((! latch_signal[125..125]) $ updown_dir), ((! latch_signal[124..124]) $ updown_dir), ((! latch_signal[123..123]) $ updown_dir), ((! latch_signal[122..122]) $ updown_dir), ((! latch_signal[121..121]) $ updown_dir), ((! latch_signal[120..120]) $ updown_dir), ((! latch_signal[119..119]) $ updown_dir), ((! latch_signal[118..118]) $ updown_dir), ((! latch_signal[117..117]) $ updown_dir), ((! latch_signal[116..116]) $ updown_dir), ((! latch_signal[115..115]) $ updown_dir), ((! latch_signal[114..114]) $ updown_dir), ((! latch_signal[113..113]) $ updown_dir), ((! latch_signal[112..112]) $ updown_dir), ((! latch_signal[111..111]) $ updown_dir), ((! latch_signal[110..110]) $ updown_dir), ((! latch_signal[109..109]) $ updown_dir), ((! latch_signal[108..108]) $ updown_dir), ((! latch_signal[107..107]) $ updown_dir), ((! latch_signal[106..106]) $ updown_dir), ((! latch_signal[105..105]) $ updown_dir), ((! latch_signal[104..104]) $ updown_dir), ((! latch_signal[103..103]) $ updown_dir), ((! latch_signal[102..102]) $ updown_dir), ((! latch_signal[101..101]) $ updown_dir), ((! latch_signal[100..100]) $ updown_dir), ((! latch_signal[99..99]) $ updown_dir), ((! latch_signal[98..98]) $ updown_dir), ((! latch_signal[97..97]) $ updown_dir), ((! latch_signal[96..96]) $ updown_dir), ((! latch_signal[95..95]) $ updown_dir), ((! latch_signal[94..94]) $ updown_dir), ((! latch_signal[93..93]) $ updown_dir), ((! latch_signal[92..92]) $ updown_dir), ((! latch_signal[91..91]) $ updown_dir), ((! latch_signal[90..90]) $ updown_dir), ((! latch_signal[89..89]) $ updown_dir), ((! latch_signal[88..88]) $ updown_dir), ((! latch_signal[87..87]) $ updown_dir), ((! latch_signal[86..86]) $ updown_dir), ((! latch_signal[85..85]) $ updown_dir), ((! latch_signal[84..84]) $ updown_dir), ((! latch_signal[83..83]) $ updown_dir), ((! latch_signal[82..82]) $ updown_dir), ((! latch_signal[81..81]) $ updown_dir), ((! latch_signal[80..80]) $ updown_dir), ((! latch_signal[79..79]) $ updown_dir), ((! latch_signal[78..78]) $ updown_dir), ((! latch_signal[77..77]) $ updown_dir), ((! latch_signal[76..76]) $ updown_dir), ((! latch_signal[75..75]) $ updown_dir), ((! latch_signal[74..74]) $ updown_dir), ((! latch_signal[73..73]) $ updown_dir), ((! latch_signal[72..72]) $ updown_dir), ((! latch_signal[71..71]) $ updown_dir), ((! latch_signal[70..70]) $ updown_dir), ((! latch_signal[69..69]) $ updown_dir), ((! latch_signal[68..68]) $ updown_dir), ((! latch_signal[67..67]) $ updown_dir), ((! latch_signal[66..66]) $ updown_dir), ((! latch_signal[65..65]) $ updown_dir), ((! latch_signal[64..64]) $ updown_dir), ((! latch_signal[63..63]) $ updown_dir), ((! latch_signal[62..62]) $ updown_dir), ((! latch_signal[61..61]) $ updown_dir), ((! latch_signal[60..60]) $ updown_dir), ((! latch_signal[59..59]) $ updown_dir), ((! latch_signal[58..58]) $ updown_dir), ((! latch_signal[57..57]) $ updown_dir), ((! latch_signal[56..56]) $ updown_dir), ((! latch_signal[55..55]) $ updown_dir), ((! latch_signal[54..54]) $ updown_dir), ((! latch_signal[53..53]) $ updown_dir), ((! latch_signal[52..52]) $ updown_dir), ((! latch_signal[51..51]) $ updown_dir), ((! latch_signal[50..50]) $ updown_dir), ((! latch_signal[49..49]) $ updown_dir), ((! latch_signal[48..48]) $ updown_dir), ((! latch_signal[47..47]) $ updown_dir), ((! latch_signal[46..46]) $ updown_dir), ((! latch_signal[45..45]) $ updown_dir), ((! latch_signal[44..44]) $ updown_dir), ((! latch_signal[43..43]) $ updown_dir), ((! latch_signal[42..42]) $ updown_dir), ((! latch_signal[41..41]) $ updown_dir), ((! latch_signal[40..40]) $ updown_dir), ((! latch_signal[39..39]) $ updown_dir), ((! latch_signal[38..38]) $ updown_dir), ((! latch_signal[37..37]) $ updown_dir), ((! latch_signal[36..36]) $ updown_dir), ((! latch_signal[35..35]) $ updown_dir), ((! latch_signal[34..34]) $ updown_dir), ((! latch_signal[33..33]) $ updown_dir), ((! latch_signal[32..32]) $ updown_dir), ((! latch_signal[31..31]) $ updown_dir), ((! latch_signal[30..30]) $ updown_dir), ((! latch_signal[29..29]) $ updown_dir), ((! latch_signal[28..28]) $ updown_dir), ((! latch_signal[27..27]) $ updown_dir), ((! latch_signal[26..26]) $ updown_dir), ((! latch_signal[25..25]) $ updown_dir), ((! latch_signal[24..24]) $ updown_dir), ((! latch_signal[23..23]) $ updown_dir), ((! latch_signal[22..22]) $ updown_dir), ((! latch_signal[21..21]) $ updown_dir), ((! latch_signal[20..20]) $ updown_dir), ((! latch_signal[19..19]) $ updown_dir), ((! latch_signal[18..18]) $ updown_dir), ((! latch_signal[17..17]) $ updown_dir), ((! latch_signal[16..16]) $ updown_dir), ((! latch_signal[15..15]) $ updown_dir), ((! latch_signal[14..14]) $ updown_dir), ((! latch_signal[13..13]) $ updown_dir), ((! latch_signal[12..12]) $ updown_dir), ((! latch_signal[11..11]) $ updown_dir), ((! latch_signal[10..10]) $ updown_dir), ((! latch_signal[9..9]) $ updown_dir), ((! latch_signal[8..8]) $ updown_dir), ((! latch_signal[7..7]) $ updown_dir), ((! latch_signal[6..6]) $ updown_dir), ((! latch_signal[5..5]) $ updown_dir), ((! latch_signal[4..4]) $ updown_dir), ((! latch_signal[3..3]) $ updown_dir), ((! latch_signal[2..2]) $ updown_dir), ((! latch_signal[1..1]) $ updown_dir), ((! latch_signal[0..0]) $ updown_dir));
+	counter_comb_bita[255..0].datad = ( B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1");
+	counter_reg_bit1a[].aclr = aclr_actual;
+	counter_reg_bit1a[].clk = clock;
+	counter_reg_bit1a[].datain = ( counter_comb_bita[255..0].combout);
+	counter_reg_bit1a[].ena = (clk_en & (((cnt_en # sclr) # sset) # sload));
+	counter_reg_bit1a[].sdata = ((! latch_signal[]) $ ((! sclr) & ((sset & s_val[]) # ((! sset) & data[]))));
+	counter_reg_bit1a[].sload = ((sclr # sset) # sload);
+	a_data[] = ((aset & a_val[]) # ((! aset) & data[]));
+	a_val[] = B"1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+	aclr_actual = ((aclr # aset) # aload);
+	aload = GND;
+	clk_en = VCC;
+	cnt_en = VCC;
+	data[] = GND;
+	effective_clrn[] = (! (aclr # ((! a_data[]) & (aload # aset))));
+	effective_prn[] = (! ((aload # aset) & a_data[]));
+	external_cin = B"1";
+	latch_signal[] = ((! effective_clrn[]) # pre_latch_signal[]);
+	pre_hazard[] = counter_reg_bit1a[].regout;
+	pre_latch_signal[] = (effective_prn[] & latch_signal[]);
+	q[] = safe_q[];
+	s_val[] = B"1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+	safe_q[] = ((((pre_hazard[] & latch_signal[]) & effective_clrn[]) # (((! latch_signal[]) & (! pre_hazard[])) & effective_clrn[])) # ((! aclr) & (! effective_prn[])));
+	sclr = GND;
+	sload = GND;
+	sset = GND;
+	updown_dir = B"1";
+	ASSERT (0) 
+	REPORT "Counter will power up to an undefined state.  An asynchronous signal should be asserted before the counter reaches a known state."
+	SEVERITY WARNING;
+END;
+--VALID FILE
