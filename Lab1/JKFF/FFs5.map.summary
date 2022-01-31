@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr 21 17:22:03 2018
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : FFs5
+Top-level Entity Name : FFs5
+Family : Cyclone II
+Total logic elements : 4
+    Total combinational functions : 4
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
