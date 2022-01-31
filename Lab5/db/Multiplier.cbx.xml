@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Multiplier">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MULT212251543|NewLCD:inst1|lpm_rom0:inst1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7f71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
