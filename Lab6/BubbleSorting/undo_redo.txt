@@ -1,0 +1,16 @@
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Simulation Waveforms
+	     2.	||Simulation Report||Simulator||Logical Memories|||BubbleSort|altsyncram0:inst1|altsyncram:altsyncram_component|altsyncram_ejc1:auto_generated|ALTSYNCRAM
+	     3.	||Simulation Report||Simulator||Simulation Waveforms
+
+
+WED
+
+	Undo Commands
+	     1.	Print Options
+	     2.	Page Setup
+	     3.	Print Options
+
+
