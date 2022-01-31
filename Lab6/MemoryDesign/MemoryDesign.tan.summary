@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.323 ns
+From           : Rst
+To             : newlcd:inst1|LCD_Display:inst|CLK_COUNT_400HZ[0]
+From Clock     : --
+To Clock       : CLK_50MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.339 ns
+From           : newlcd:inst1|LCD_Display:inst|DATA_BUS_VALUE[3]
+To             : DBUS[3]
+From Clock     : CLK_50MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.755 ns
+From           : ADD[2]
+To             : altsyncram1:inst|altsyncram:altsyncram_component|altsyncram_5jc1:auto_generated|ram_block1a0~porta_address_reg2
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_50MHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 149.52 MHz ( period = 6.688 ns )
+From           : newlcd:inst1|lpm_rom0:inst1|altsyncram:altsyncram_component|altsyncram_og71:auto_generated|ram_block1a0~porta_address_reg4
+To             : newlcd:inst1|LCD_Display:inst|DATA_BUS_VALUE[3]
+From Clock     : CLK_50MHz
+To Clock       : CLK_50MHz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 200.00 MHz ( period = 5.000 ns )
+From           : altsyncram1:inst|altsyncram:altsyncram_component|altsyncram_5jc1:auto_generated|ram_block1a0~porta_datain_reg7
+To             : altsyncram1:inst|altsyncram:altsyncram_component|altsyncram_5jc1:auto_generated|ram_block1a7~porta_memory_reg0
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
