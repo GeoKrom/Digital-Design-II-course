@@ -1,0 +1,34 @@
+|DFFLATCH
+D_Q <= D_FF:inst.Q
+CLK => D_FF:inst.CLK
+CLK => MyLatch:inst1.Rst
+D => D_FF:inst.D
+D => MyLatch:inst1.D
+CLR => D_FF:inst.CLR
+CLR => MyLatch:inst1.LE
+SET => D_FF:inst.SET
+SET => MyLatch:inst1.Set
+L_Q <= MyLatch:inst1.Q
+
+
+|DFFLATCH|D_FF:inst
+CLK => DFF.CLK
+D => DFF.DATAIN
+CLR => DFF.ACLR
+CLR => DFF.IN0
+SET => DFF.IN1
+Q <= DFF.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= DFF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DFFLATCH|MyLatch:inst1
+Rst => FF.IN0
+Rst => comb.IN1
+Rst => comb.IN1
+Set => FF.IN1
+LE => FF.LATCH_ENABLE
+D => FF.DATAIN
+Q <= FF.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= FF.DB_MAX_OUTPUT_PORT_TYPE
+
+
