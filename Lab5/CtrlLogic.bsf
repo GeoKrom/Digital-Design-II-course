@@ -1,0 +1,119 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 112 240)
+	(text "CtrlLogic" (rect 5 0 48 12)(font "Arial" ))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Rst" (rect 0 0 17 12)(font "Arial" ))
+		(text "Rst" (rect 21 27 38 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 43 42 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "SL_A" (rect 0 0 25 12)(font "Arial" ))
+		(text "SL_A" (rect 50 27 75 39)(font "Arial" ))
+		(line (pt 96 32)(pt 80 32)(line_width 1))
+	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "SL_B" (rect 0 0 25 12)(font "Arial" ))
+		(text "SL_B" (rect 50 43 75 55)(font "Arial" ))
+		(line (pt 96 48)(pt 80 48)(line_width 1))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "SL_H" (rect 0 0 27 12)(font "Arial" ))
+		(text "SL_H" (rect 48 59 75 71)(font "Arial" ))
+		(line (pt 96 64)(pt 80 64)(line_width 1))
+	)
+	(port
+		(pt 96 80)
+		(output)
+		(text "SL_L" (rect 0 0 24 12)(font "Arial" ))
+		(text "SL_L" (rect 51 75 75 87)(font "Arial" ))
+		(line (pt 96 80)(pt 80 80)(line_width 1))
+	)
+	(port
+		(pt 96 96)
+		(output)
+		(text "SL_C" (rect 0 0 27 12)(font "Arial" ))
+		(text "SL_C" (rect 48 91 75 103)(font "Arial" ))
+		(line (pt 96 96)(pt 80 96)(line_width 1))
+	)
+	(port
+		(pt 96 112)
+		(output)
+		(text "EN_A" (rect 0 0 28 12)(font "Arial" ))
+		(text "EN_A" (rect 47 107 75 119)(font "Arial" ))
+		(line (pt 96 112)(pt 80 112)(line_width 1))
+	)
+	(port
+		(pt 96 128)
+		(output)
+		(text "EN_B" (rect 0 0 28 12)(font "Arial" ))
+		(text "EN_B" (rect 47 123 75 135)(font "Arial" ))
+		(line (pt 96 128)(pt 80 128)(line_width 1))
+	)
+	(port
+		(pt 96 144)
+		(output)
+		(text "EN_H" (rect 0 0 29 12)(font "Arial" ))
+		(text "EN_H" (rect 46 139 75 151)(font "Arial" ))
+		(line (pt 96 144)(pt 80 144)(line_width 1))
+	)
+	(port
+		(pt 96 160)
+		(output)
+		(text "EN_L" (rect 0 0 27 12)(font "Arial" ))
+		(text "EN_L" (rect 48 155 75 167)(font "Arial" ))
+		(line (pt 96 160)(pt 80 160)(line_width 1))
+	)
+	(port
+		(pt 96 176)
+		(output)
+		(text "EN_C" (rect 0 0 29 12)(font "Arial" ))
+		(text "EN_C" (rect 46 171 75 183)(font "Arial" ))
+		(line (pt 96 176)(pt 80 176)(line_width 1))
+	)
+	(parameter
+		"n"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 80 208)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 112 -64 212 16))
+)

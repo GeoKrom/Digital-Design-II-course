@@ -1,0 +1,96 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+# Date created = 21:45:43  May 13, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Multiplier_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY MULT212251543
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:45:43  MAY 13, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VHDL_FILE Reg.vhd
+set_global_assignment -name BDF_FILE REG.bdf
+set_global_assignment -name BDF_FILE REGISTER.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE REGISTER.vwf
+set_global_assignment -name VHDL_FILE Adder.vhd
+set_global_assignment -name BDF_FILE ADDER4BIT.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ADDER4BIT.vwf
+set_global_assignment -name VHDL_FILE CtrlLogic.vhd
+set_global_assignment -name BDF_FILE CONTROLUNIT.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CONTROLUNIT.vwf
+set_global_assignment -name VHDL_FILE Multiplier.vhd
+set_global_assignment -name BDF_FILE MULTIPLIER1.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_G26 -to CLK
+set_location_assignment PIN_N23 -to SI
+set_global_assignment -name MISC_FILE "E:/Ηλεκτρονική και Τηλεπικοινωνίες/Digital Design II/Lab5/Multiplier.dpf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../Lab4/Counter/MULTIPLIER1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Multiplier.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Multiplier.vwf
+set_global_assignment -name SEARCH_PATH "c:/altera/91sp2/corelibrary"
+set_global_assignment -name HEX_FILE ROM.hex
+set_location_assignment PIN_N2 -to CLK_50MHz
+set_location_assignment PIN_H3 -to DBUS[7]
+set_global_assignment -name BDF_FILE MULT.bdf
+set_global_assignment -name BDF_FILE MULT212.bdf
+set_global_assignment -name BDF_FILE ../MULT212.bdf
+set_global_assignment -name BDF_FILE MULT212251543.bdf
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_N25 -to D_IN[0]
+set_location_assignment PIN_N26 -to D_IN[1]
+set_location_assignment PIN_P25 -to D_IN[2]
+set_location_assignment PIN_AE14 -to D_IN[3]
+set_location_assignment PIN_P23 -to RST
+set_location_assignment PIN_H4 -to DBUS[6]
+set_location_assignment PIN_J3 -to DBUS[5]
+set_location_assignment PIN_J4 -to DBUS[4]
+set_location_assignment PIN_H2 -to DBUS[3]
+set_location_assignment PIN_H1 -to DBUS[2]
+set_location_assignment PIN_J2 -to DBUS[1]
+set_location_assignment PIN_J1 -to DBUS[0]
+set_location_assignment PIN_K2 -to LCD_BL_STATUS_OUT
+set_location_assignment PIN_K3 -to LCD_E
+set_location_assignment PIN_K1 -to LCD_RS
+set_location_assignment PIN_K4 -to LCD_RW
+set_location_assignment PIN_L4 -to LCD_STATUS_OUT
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
